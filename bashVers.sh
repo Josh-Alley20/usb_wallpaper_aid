@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
-image_1="/mnt/d/ConcealCTFBackground.png"
-image_2="/mnt/d/SRNLEscapeRoomBackground.png"
+# put image file paths from D:\ drive
+image_1="D:\image_1"
+image_2="D:\image_2"
 
 
 destination="$HOME/Desktop"
