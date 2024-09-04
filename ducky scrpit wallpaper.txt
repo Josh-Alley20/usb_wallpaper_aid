@@ -1,0 +1,10 @@
+REM DuckyScript to run a Python script on plug-in
+
+DELAY 3000  // Wait for 3 seconds to let the system get ready
+GUI r       // Windows Key + R to open the Run dialog
+DELAY 500
+STRING cmd // opean CMD
+ENTER
+DELAY 500
+STRING python -c "import ctypes; import shutil; from pathlib import Path; import traceback; SPI_SETDESKWALLPAPER = 20; desktop = Path.home() / 'Desktop'; wallpaper_path = r'D:\\desktop_test.jpg'; shutil.copy(wallpaper_path, desktop); ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, str(desktop / Path(wallpaper_path).name), 3)"   // Run Python code directly
+ENTER
