@@ -142,4 +142,4 @@ copy_images_to_folder(WALLPAPER_SOURCE_IMAGES, FOLDER_PATH)
 create_python_script()
 create_bat_file()
 schedule_task('WallpaperSchedulerTask', BAT_FILE_PATH, '12:00', '09/12/2024') # change this to set a different date and time.
-change_current_wallpaper()  # Change the wallpaper at the end
+change_current_wallpaper()
