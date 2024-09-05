@@ -1,7 +1,7 @@
 #
 # Original Code from rhawk117 forked and majorly edited by Josh-Alley20
 #
-# Made for the scheduled  switching of wallpapers on windows
+# Made for the scheduled switching of wallpapers on windows
 #
 # 9/5/2024
 #
