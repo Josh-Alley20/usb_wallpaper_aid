@@ -12,8 +12,7 @@ import subprocess
 import ctypes
 from pathlib import Path
 import logging
-import requests  # Import the requests library for downloading images
-
+import requests
 
 def combine(base, file_name) -> str:
     return os.path.join(base, file_name)
