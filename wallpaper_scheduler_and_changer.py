@@ -159,7 +159,7 @@ def main() -> None:
     copy_images_to_folder(drive_images, APP_PATHS.BASE)
     create_python_script()
     create_bat_file()
-    
+
     schedule_task(
         task_name='WallpaperSchedulerTask',
         bat_file_path=APP_PATHS.BAT_FILE,
