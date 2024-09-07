@@ -13,8 +13,10 @@ import ctypes
 from pathlib import Path
 import logging
 
+
 def combine(base, file_name) -> str:
     return os.path.join(base, file_name)
+
 
 class APP_PATHS:
     BASE = r'C:\auto_wallpaper_switcher'
@@ -32,6 +34,7 @@ class IMAGE_FILES:
 
     def base(file_name: str) -> str:
         return combine(APP_PATHS.BASE, file_name)
+
 
 def setup_logging_and_create_folder(path: str) -> None:
     """
@@ -51,6 +54,7 @@ def setup_logging_and_create_folder(path: str) -> None:
     )
     logging.info(f'Logging initialized in {APP_PATHS.LOG_FILE}')
 
+
 def copy_images_to_folder(src_imgs: list[str], dst_dir: str) -> None:
     """Copy images from source to destination folder."""
     for image in src_imgs:
@@ -63,6 +67,7 @@ def copy_images_to_folder(src_imgs: list[str], dst_dir: str) -> None:
         else:
             logging.warning(f'File not found: {image}')
 
+
 def write_file(file_path: str, content: str) -> None:
     """Write content to a file."""
     try:
@@ -71,6 +76,7 @@ def write_file(file_path: str, content: str) -> None:
         logging.info(f'File written: {file_path}')
     except Exception as e:
         logging.error(f'Failed to write file: {file_path}. Error: {e}')
+
 
 def create_python_script() -> None:
     """Create Python script to change wallpaper."""
@@ -121,6 +127,7 @@ def schedule_task(task_name: str, bat_file_path: str, time, date) -> None:
     except subprocess.CalledProcessError as e:
         logging.error(f'Failed to create the scheduled task. Error: {e}')
 
+
 def change_current_wallpaper() -> None:
     """Change the current wallpaper to CTF_WP.png."""
     SPI_SETDESKWALLPAPER = 20
@@ -168,6 +175,7 @@ def main() -> None:
     )  # change this to set a different date and time.
 
     change_current_wallpaper()
+
 
 if __name__ == '__main__':
     main()
